@@ -1,0 +1,51 @@
+@media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+      padding: 2rem;
+      height: auto;
+    }
+  
+    .text-content h1 {
+      font-size: 3rem;
+    }
+  
+    .text-content h4,
+    .text-content p {
+      font-size: 1.2rem;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .buttons button,
+    .cta {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .image-content {
+      margin-top: 2rem;
+    }
+  
+    .image-content img {
+      width: 250px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .text-content h1 {
+      font-size: 2.2rem;
+    }
+  
+    .text-content h4,
+    .text-content p {
+      font-size: 1rem;
+    }
+  
+    .container {
+      padding: 1.5rem;
+    }
+  }
+  

@@ -1,0 +1,40 @@
+.header-secundario {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(6px);
+  padding: 1rem 2rem; /* aumentei o padding vertical pra deixar mais gordinho */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* centraliza os ícones verticalmente */
+  z-index: 999;
+  border-bottom: none; /* remove a linha branca */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* opcional: sombra sutil pra destacar */
+}
+
+.nav-secundaria {
+  display: flex;
+  gap: 2rem;
+  align-items: center; /* garante alinhamento dos botões */
+}
+
+.nav-secundaria button {
+  all: unset;
+  color: white;
+  cursor: pointer;
+  padding: 0.6rem; /* um pouco mais de espaço pro clique */
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-secundaria button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.nav-secundaria button.ativo {
+  background: rgba(181, 181, 181, 0.445);
+  transform: scale(1.15);
+}

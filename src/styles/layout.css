@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    height: 100vh;
+  }
+  
+  .text-content {
+    flex: 1;
+  }
+  
+  .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-content img {
+    width: 320px;
+    height: auto;
+  }
+  

@@ -1,143 +1,219 @@
-/* Tema geral */
-body.light {
-    background-color: #f7f7f7;
-    color: #1e1e1e;
-  }
-  
-  body.dark {
-    background-color: #0d0d0d;
-    color: white;
-  }
-  
-  /* Botões e CTA */
-  body.light .buttons button {
-    background-color: #e0e0e0;
-    color: #1e1e1e;
-  }
-  
-  body.dark .buttons button {
-    background-color: #1e1e1e;
-    color: white;
-  }
-  
-  body.light .cta {
-    background-color: #008562; /* Roxo no modo claro */
-    color: white;
-  }
-  
-  body.dark .cta {
-    background-color: #72e0c2; /* Azul-menta no modo escuro */
-    color: black;
-  }
-  
-  /* Seções */
-  body.light #analise,
-  body.light #webdesign,
-  body.light #programacao {
-    background-color: #f7f7f7;
-    color: #1e1e1e;
-    padding: 4rem;
-    min-height: 100vh;
-  }
-  
-  body.dark #analise,
-  body.dark #webdesign,
-  body.dark #programacao {
-    background-color: #0d0d0d;
-    color: white;
-    padding: 4rem;
-    min-height: 100vh;
-  }
-  
-  /* ================== */
-  /* Toggle Switch Tema */
-  /* ================== */
-  .theme-switch {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 64px;
-    height: 32px;
-    background-color: #e4e4e4;
-    border-radius: 999px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 4px;
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  body.dark .theme-switch {
-    background-color: #2a2a2a;
-  }
-  
-  /* Ícones dentro do switch */
-  .icon-container {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-    transition: all 0.3s ease;
-  }
-  
-  body.light .icon-container {
-    color: #1e1e1e;
-  }
-  
-  body.dark .icon-container {
-    color: white;
-  }
-  
-  /* Estilo do botão ativo (parece deslizar) */
-  .icon-container.selected {
-    background-color: #fff;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-    transform: scale(1.1);
-  }
-  
-  body.light .icon-container.selected {
-    background-color: #1e1e1e;
-    color: white;
-  }
-  
-  body.dark .icon-container.selected {
-    background-color: white;
-    color: #1e1e1e;
-  }
-  
-  /* ================== */
-  /* Destaque da Ana ✨ */
-  /* ================== */
-  .highlight {
-    font-weight: bold;
-  }
-  
-  body.light .highlight {
-    color: #008562; /* Roxo no modo claro */
-  }
-  
-  body.dark .highlight {
-    color: #72e0c2; /* Azul-menta no modo escuro */
-  }
-  
+/* ================== */
+/* Tema Geral         */
+/* ================== */
 
-  /* Header - Tema Claro */
+body.light {
+  background-color: #f7f7f7;
+  color: #1e1e1e;
+}
+
+body.dark {
+  background-color: #0d0d0d;
+  color: white;
+}
+
+/* ================== */
+/* Botões e CTA       */
+/* ================== */
+
+body.light .buttons button {
+  background-color: #e0e0e0;
+  color: #1e1e1e;
+}
+
+body.dark .buttons button {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.light .cta {
+  background-color: #008562;
+  color: white;
+}
+
+body.dark .cta {
+  background-color: #72e0c2;
+  color: black;
+}
+
+/* ================== */
+/* Seções             */
+/* ================== */
+
+body.light #analise,
+body.light #webdesign,
+body.light #programacao {
+  background-color: #f7f7f7;
+  color: #1e1e1e;
+  padding: 4rem;
+  min-height: 100vh;
+}
+
+body.dark #analise,
+body.dark #webdesign,
+body.dark #programacao {
+  background-color: #0d0d0d;
+  color: white;
+  padding: 4rem;
+  min-height: 100vh;
+}
+
+/* ============================ */
+/* Botão de Troca de Tema 🔄   */
+/* ============================ */
+
+.theme-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+  height: 2.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+body.dark .theme-switch {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.light .theme-switch {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.theme-switch:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Ícones do tema */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.icon-container.selected {
+  background-color: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+body.light .icon-container.selected {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark .icon-container.selected {
+  background-color: white;
+  color: #1e1e1e;
+}
+
+/* ============================ */
+/* Botão "Contate-me"           */
+/* ============================ */
+
+.contato-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 2.2rem;
+}
+
+.contato-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+body.dark .contato-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+body.dark .contato-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+body.light .contato-btn {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #1e1e1e;
+}
+
+body.light .contato-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown de contato */
+
+.contato-dropdown {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  background-color: rgba(40, 40, 40, 0.95);
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  color: white;
+  z-index: 10;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contato-dropdown a {
+  color: #a7c8ff;
+  text-decoration: none;
+}
+
+.contato-dropdown a:hover {
+  text-decoration: underline;
+}
+
+/* ================== */
+/* Destaque do nome   */
+/* ================== */
+
+.highlight {
+  font-weight: bold;
+}
+
+body.light .highlight {
+  color: #008562;
+}
+
+body.dark .highlight {
+  color: #72e0c2;
+}
+
+/* ================== */
+/* Header - Tema Claro */
+/* ================== */
+
 .light .header-secundario {
-    background-color: rgba(225, 225, 225, 0.61);
-    border-bottom: none;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .light .nav-secundaria button {
-    color: black;
-  }
-  
-  .light .nav-secundaria button:hover {
-    background: rgba(0, 0, 0, 0.05);
-  }
-  
+  background-color: rgba(225, 225, 225, 0.61);
+  border-bottom: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.light .nav-secundaria button {
+  color: black;
+}
+
+.light .nav-secundaria button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}

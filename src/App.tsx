@@ -1,8 +1,5 @@
 import { useEffect, useState } from 'react';
 import './styles/App.css';
-import './styles/ThemeToggle.css';
-import './styles/HeaderControls.css';
-
 import { Moon, Sun } from 'lucide-react';
 import HeaderSecundario from './HeaderSecundario';
 import avatar from './assets/ana_avatar_dois.png';
@@ -50,27 +47,41 @@ function App() {
     <>
       {mostrarHeader && <HeaderSecundario />}
 
-      <div className="topControls">
-        <div className="themeSwitch" onClick={toggleTheme}>
-          <div className={`iconContainer ${theme === 'light' ? 'selected' : ''}`}>
+      {/* Botões fixos no topo direito */}
+      <div
+        style={{
+          position: 'fixed',
+          top: '1rem',
+          right: '1rem',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.75rem',
+          zIndex: 1000,
+        }}
+      >
+        {/* Botão de tema */}
+        <div className="theme-switch" onClick={toggleTheme}>
+          <div className={`icon-container ${theme === 'light' ? 'selected' : ''}`}>
             <Sun size={18} />
           </div>
-          <div className={`iconContainer ${theme === 'dark' ? 'selected' : ''}`}>
+          <div className={`icon-container ${theme === 'dark' ? 'selected' : ''}`}>
             <Moon size={18} />
           </div>
         </div>
 
+        {/* Botão de contato */}
         <ContatoDropdown />
       </div>
 
+      {/* Conteúdo principal */}
       <div className="container">
-        <div className="textContent">
+        <div className="text-content">
           <h4>OLÁ, PESSOAL <span className="wave">👋</span></h4>
           <h1>Eu sou a <span className="highlight">Ana!</span></h1>
           <p>Analista de dados, Web designer, e Programadora FullStack.</p>
 
           <div className="buttons">
-            <button onClick={() => scrollToSection('analise')}>Anáise de Dados</button>
+            <button onClick={() => scrollToSection('analise')}>Análise de Dados</button>
             <button onClick={() => scrollToSection('webdesign')}>Web Design</button>
             <button onClick={() => scrollToSection('programacao')}>Programação Web</button>
           </div>
@@ -78,14 +89,15 @@ function App() {
           <button className="cta">Meus Projetos</button>
         </div>
 
-        <div className="imageContent">
+        <div className="image-content">
           <img src={avatar} alt="Avatar" />
         </div>
       </div>
 
-      <div id="analise" className="sectionOffset"><AnaliseDados /></div>
-      <div id="webdesign" className="sectionOffset"><WebDesign /></div>
-      <div id="programacao" className="sectionOffset"><Programacao /></div>
+      {/* Seções */}
+      <div id="analise" className="section-offset"><AnaliseDados /></div>
+      <div id="webdesign" className="section-offset"><WebDesign /></div>
+      <div id="programacao" className="section-offset"><Programacao /></div>
     </>
   );
 }

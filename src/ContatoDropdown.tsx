@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import './styles/ContatoDropdown.css'; // ou usa CSS module se preferir
+import './styles/ContatoDropdown.css';
 
 const ContatoDropdown = () => {
   const [mostrar, setMostrar] = useState(false);
@@ -28,8 +28,8 @@ const ContatoDropdown = () => {
       </button>
       {mostrar && (
         <div className="contato-dropdown">
-          <div><strong>Email:</strong> <a href="mailto:seuemail@email.com">seuemail@email.com</a></div>
-          <div><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/seuusuario" target="_blank" rel="noopener noreferrer">/seuusuario</a></div>
+          <div><strong>Email:</strong> <a href="mailto:seuemail@email.com">anacarolinazambarda@gmail.com</a></div>
+          <div><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/seuusuario" target="_blank" rel="noopener noreferrer">/anazambarda</a></div>
         </div>
       )}
     </div>

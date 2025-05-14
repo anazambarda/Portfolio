@@ -5,13 +5,13 @@
   width: 100%;
   background-color: rgba(20, 20, 20, 0.95);
   backdrop-filter: blur(6px);
-  padding: 1rem 2rem; /* aumentei o padding vertical pra deixar mais gordinho */
+  padding: 1rem 2rem; 
   display: flex;
   justify-content: center;
   align-items: center; /* centraliza os ícones verticalmente */
   z-index: 999;
-  border-bottom: none; /* remove a linha branca */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* opcional: sombra sutil pra destacar */
+  border-bottom: none; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); 
 }
 
 .nav-secundaria {

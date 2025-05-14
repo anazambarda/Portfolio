@@ -1,46 +1,82 @@
+/* =========================== */
+/* Container do botão contato */
+/* =========================== */
+
 .contato-box {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  .contato-btn {
-    margin-right: 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: none;
-    border-radius: 999px;
-    padding: 0.5rem 0.9rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .contato-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .contato-dropdown {
-    position: absolute;
-    top: 2.5rem;
-    right: 0;
-    background-color: rgba(40, 40, 40, 0.95);
-    padding: 0.8rem 1rem;
-    border-radius: 10px;
-    color: white;
-    z-index: 10;
-    font-size: 0.9rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  .contato-dropdown a {
-    color: #a7c8ff;
-    text-decoration: none;
-  }
-  
-  .contato-dropdown a:hover {
-    text-decoration: underline;
-  }
-  
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 2.2rem;
+}
+
+/* =========================== */
+/* Botão "Contate-me" base     */
+/* =========================== */
+
+.contato-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* =========================== */
+/* Tema escuro                 */
+/* =========================== */
+
+body.dark .contato-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+body.dark .contato-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* =========================== */
+/* Tema claro                  */
+/* =========================== */
+
+body.light .contato-btn {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #1e1e1e;
+}
+
+body.light .contato-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* =========================== */
+/* Dropdown de contato         */
+/* =========================== */
+
+.contato-dropdown {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  background-color: rgba(40, 40, 40, 0.95);
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  color: white;
+  z-index: 10;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contato-dropdown a {
+  color: #a7c8ff;
+  text-decoration: none;
+}
+
+.contato-dropdown a:hover {
+  text-decoration: underline;
+}

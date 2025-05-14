@@ -1,117 +1,126 @@
 /* ============================= */
-/* Web Design - Estilo Geral     */
+/* Web Design - Somente essa seção */
 /* ============================= */
 
+.section-webdesign-offset {
+  scroll-margin-top: 5rem;
+  padding-top: 1rem;  /* leve espaço para não colar no topo */
+  margin-top: 0;
+}
+
 .webdesign-container {
-    text-align: center;
-    padding: 0.5rem 1rem 2rem;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* ============================= */
-  /* Título e descrição            */
-  /* ============================= */
-  
-  .webdesign-title {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: inherit;
-  }
-  
-  .webdesign-desc {
-    max-width: 800px;
-    margin: 0 auto 2rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: inherit;
-  }
-  
-  /* ============================= */
-  /* Grade de logos                */
-  /* ============================= */
-  
-  .logo-grid {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .logo-img {
-    width: 140px;
-    height: auto;
-    cursor: pointer;
-    border-radius: 0.75rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .logo-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  }
-  
-  /* ============================= */
-  /* Zoom da imagem                */
-  /* ============================= */
-  
-  .zoom-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.65);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-  }
-  
-  .zoomed-img {
-    max-width: 80%;
-    max-height: 80%;
-    border-radius: 1rem;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* ============================= */
-  /* Botão de fechar               */
-  /* ============================= */
-  
-  .close-button {
-    position: absolute;
-    top: 2rem;
-    left: 2rem; /* ← mudou de right para left */
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0.3rem 0.8rem;
-    border-radius: 50%;
-    transition: background 0.3s ease;
-    z-index: 1000;
-  }
-  
-  .close-button:hover {
-    background: rgba(255, 255, 255, 0.3);
-  }
-  
-  
-  /* ============================= */
-  /* Tema Claro / Escuro           */
-  /* ============================= */
-  
-  body.dark .webdesign-desc {
-    color: #cccccc;
-  }
-  
-  body.light .webdesign-desc {
-    color: #333333;
-  }
-  
-  body.light .logo-img:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
+  text-align: center;
+  padding: 0 1rem 2rem;
+  background-color: transparent;
+  margin-top: 0;
+}
+
+.webdesign-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 0.6rem;
+  color: inherit;
+}
+
+.webdesign-desc {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: inherit;
+}
+
+/* ============================= */
+/* Grade de Logos                */
+/* ============================= */
+
+.logo-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.logo-img {
+  width: 220px;
+  height: auto;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* ============================= */
+/* Zoom da imagem                */
+/* ============================= */
+
+.zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.zoomed-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================= */
+/* Botão de fechar               */
+/* ============================= */
+
+.close-button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ===================== */
+/* Tema Escuro */
+/* ===================== */
+
+body.dark .webdesign-desc {
+  color: #cccccc;
+}
+
+body.dark .logo-img:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* ===================== */
+/* Tema Claro */
+/* ===================== */
+
+body.light .webdesign-desc {
+  color: #333333;
+}
+
+body.light .logo-img:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

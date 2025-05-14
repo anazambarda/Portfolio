@@ -14,7 +14,7 @@ const WebDesign = () => {
   const [zoomed, setZoomed] = useState<string | null>(null);
 
   return (
-    <section id="webdesign" className="webdesign-container">
+    <section id="webdesign" className="section-webdesign-offset webdesign-container">
       <h2 className="webdesign-title">WEB DESIGN</h2>
       <p className="webdesign-desc">
         Aqui estão alguns logos e artes que desenvolvi com foco em identidade visual e usabilidade.
@@ -39,7 +39,7 @@ const WebDesign = () => {
           <button
             className="close-button"
             onClick={(e) => {
-              e.stopPropagation(); // impede fechar ao clicar dentro
+              e.stopPropagation();
               setZoomed(null);
             }}
           >

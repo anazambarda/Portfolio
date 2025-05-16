@@ -1,7 +1,30 @@
-import { PieChart, BarChart4, LineChart } from 'lucide-react'; // ícone novo adicionado
-import './styles/analiseDeDados.css'; // CSS para estilização do componente
+import { useState, useEffect } from 'react';
+import { PieChart, BarChart4, LineChart, ArrowLeftCircle } from 'lucide-react';
+import './styles/analiseDeDados.css';
 
 const AnaliseDados = () => {
+  const [modalAberto, setModalAberto] = useState(false);
+  const [iframeUrl, setIframeUrl] = useState<string | null>(null);
+
+  const abrirModal = (url: string) => {
+    setIframeUrl(url);
+    setModalAberto(true);
+  };
+
+  const fecharModal = () => {
+    setModalAberto(false);
+    setIframeUrl(null);
+  };
+
+  useEffect(() => {
+    if (modalAberto) {
+      document.body.classList.add('modal-aberto');
+    } else {
+      document.body.classList.remove('modal-aberto');
+    }
+    return () => document.body.classList.remove('modal-aberto');
+  }, [modalAberto]);
+
   return (
     <section className="analise-container">
       <h2 className="analise-titulo">ANÁLISE DE DADOS</h2>
@@ -11,48 +34,56 @@ const AnaliseDados = () => {
       </p>
 
       <div className="projetos-wrapper">
-        <div className="projeto-card">
+        <div
+          className="projeto-card"
+          onClick={() =>
+            abrirModal(
+              'https://app.powerbi.com/view?r=eyJrIjoiNDFhYjA4OWUtMzJjMC00ZTc3LWExNWYtZjUwMjk3M2M0ZjQ1IiwidCI6IjFiZGQzYWUxLTRiYjgtNDRjYS04MmIzLTgzMzlmYWVjODFlZSJ9'
+            )
+          }
+        >
           <PieChart className="icon" size={44} />
           <h3>Projeto Sicredi</h3>
           <p className="projeto-sub">Painel interativo de desempenho de vendas</p>
-          <a
-            href="https://link-projeto1.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-ver-projeto"
-          >
-            Ver projeto
-          </a>
+          <span className="btn-ver-projeto">Ver projeto</span>
         </div>
 
-        <div className="projeto-card">
+        <div
+          className="projeto-card"
+          onClick={() => abrirModal('https://link-projeto2.com')}
+        >
           <BarChart4 className="icon" size={44} />
           <h3>Projeto Sicredi</h3>
           <p className="projeto-sub">Análise comparativa de metas e resultados</p>
-          <a
-            href="https://link-projeto2.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-ver-projeto"
-          >
-            Ver projeto
-          </a>
+          <span className="btn-ver-projeto">Ver projeto</span>
         </div>
 
-        <div className="projeto-card">
+        <div
+          className="projeto-card"
+          onClick={() => abrirModal('https://link-projeto3.com')}
+        >
           <LineChart className="icon" size={44} />
           <h3>Projeto Sicredi</h3>
           <p className="projeto-sub">Previsão de receita baseada em tendências históricas</p>
-          <a
-            href="https://link-projeto3.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-ver-projeto"
-          >
-            Ver projeto
-          </a>
+          <span className="btn-ver-projeto">Ver projeto</span>
         </div>
       </div>
+
+      {modalAberto && (
+        <div className="modal-overlay">
+          <div className="modal-voltar" onClick={fecharModal}>
+            <ArrowLeftCircle className="icone-voltar" size={28} />
+          </div>
+          <div className="modal-frame-wrapper">
+            <iframe
+              src={iframeUrl || ''}
+              title="Dashboard Power BI"
+              className="iframe-centralizado"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

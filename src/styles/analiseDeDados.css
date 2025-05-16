@@ -120,3 +120,57 @@
     transition: background 0.3s ease;
   }
   
+body.modal-aberto {
+  overflow: hidden;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-voltar {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+.icone-voltar {
+  color: #fff;
+  transition: opacity 0.2s;
+}
+
+.icone-voltar:hover {
+  opacity: 0.6;
+}
+
+.modal-frame-wrapper {
+  width: 95%;
+  max-width: 1400px;
+  height: 90%;
+  background-color: #000;
+  overflow: hidden;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iframe-centralizado {
+  width: 100%;
+  height: 110%;
+  border: none;
+  transform: scale(1.05);
+  transform-origin: top;
+}

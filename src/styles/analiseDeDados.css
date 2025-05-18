@@ -158,19 +158,21 @@ body.modal-aberto {
 .modal-frame-wrapper {
   width: 95%;
   max-width: 1400px;
-  height: 90%;
+  height: 85vh; /* altura visível do conteúdo */
   background-color: #000;
   overflow: hidden;
   border-radius: 12px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start; 
 }
 
 .iframe-centralizado {
   width: 100%;
-  height: 110%;
+  height: 100vh; 
   border: none;
-  transform: scale(1.05);
-  transform-origin: top;
+}
+
+.btn-ver-projeto {
+  cursor: pointer;
 }

@@ -1,42 +1,80 @@
+/* ============================ */
+/* Reset e Estrutura Geral      */
+/* ============================ */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body, html, .app {
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .section-offset {
-    scroll-margin-top: 100px;
-  }
-  
-  .theme-switch {
-    display: flex;
-    background-color: #2a2a2a;
-    border-radius: 999px;
-    padding: 0.3rem;
-    gap: 0.3rem;
-    align-items: center;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .icon-container {
-    background-color: transparent;
-    color: white;
-    padding: 0.2rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-  }
-  
-  .icon-container.selected {
-    background-color: white;
-    color: black;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, .app {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: inherit;
+  color: inherit;
+}
+
+/* Scroll offset para âncoras */
+.section-offset {
+  scroll-margin-top: 100px;
+}
+
+/* ============================ */
+/* Botão de troca de tema       */
+/* ============================ */
+
+.theme-switch {
+  display: flex;
+  border-radius: 999px;
+  padding: 0.3rem;
+  gap: 0.3rem;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+/* Fundo do botão de tema */
+body.light .theme-switch {
+  background-color: rgba(216, 180, 252, 0.15); /* lavanda suave */
+}
+
+body.dark .theme-switch {
+  background-color: rgba(255, 255, 255, 0.08); /* neutro translúcido */
+}
+
+.theme-switch:hover {
+  background-color: rgba(167, 139, 250, 0.25); /* hover roxo pastel */
+}
+
+/* ============================ */
+/* Ícones do botão de tema      */
+/* ============================ */
+
+.icon-container {
+  background-color: transparent;
+  color: inherit;
+  padding: 0.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.icon-container.selected {
+  background-color: #7c3aed; /* roxo principal */
+  color: white;
+  transform: scale(1.1);
+}
+
+body.light .icon-container.selected {
+  background-color: #4c1d95; /* roxo escuro */
+  color: #f3e8ff; /* lavanda clara */
+}
+
+body.dark .icon-container.selected {
+  background-color: #f3e8ff; /* lavanda clara */
+  color: #1e1b29; /* roxo carvão escuro */
+}

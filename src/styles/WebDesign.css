@@ -1,10 +1,10 @@
 /* ============================= */
-/* Web Design - Somente essa seção */
+/* Web Design - Somente essa seção (Roxo) */
 /* ============================= */
 
 .section-webdesign-offset {
   scroll-margin-top: 5rem;
-  padding-top: 1rem;  /* leve espaço para não colar no topo */
+  padding-top: 1rem;
   margin-top: 0;
 }
 
@@ -49,9 +49,15 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.logo-img:hover {
+/* Hover com tons roxos */
+body.light .logo-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(172, 148, 228, 0.3); /* lilás suave */
+}
+
+body.dark .logo-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(130, 104, 200, 0.4); /* roxo escuro */
 }
 
 /* ============================= */
@@ -86,7 +92,7 @@
   position: absolute;
   top: 2rem;
   right: 2rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(172, 148, 228, 0.15); /* lilás translúcido */
   color: white;
   border: none;
   font-size: 2rem;
@@ -98,7 +104,7 @@
 }
 
 .close-button:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(172, 148, 228, 0.4); /* hover lilás mais forte */
 }
 
 /* ===================== */
@@ -106,11 +112,7 @@
 /* ===================== */
 
 body.dark .webdesign-desc {
-  color: #cccccc;
-}
-
-body.dark .logo-img:hover {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  color: #d8c4f2; /* roxo acinzentado claro */
 }
 
 /* ===================== */
@@ -118,9 +120,5 @@ body.dark .logo-img:hover {
 /* ===================== */
 
 body.light .webdesign-desc {
-  color: #333333;
-}
-
-body.light .logo-img:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #4b3269; /* roxo escuro suave */
 }

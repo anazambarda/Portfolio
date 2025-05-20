@@ -1,73 +1,105 @@
 .text-content h4 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .text-content h1 {
-    font-size: 4rem;
-    font-weight: bold;
-  }
-  
-  .highlight {
-    color: #72e0c2;
-  }
-  
-  .text-content p {
-    font-size: 1.5rem;
-    margin: 2rem 0;
-  }
-  
-  .buttons {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-  .buttons button {
-    background-color: #1e1e1e;
-    color: white;
-    border: none;
-    padding: 1rem 2rem; /* aumentei a altura suavemente */
-    border-radius: 12px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    width: 220px; /* um pouco mais largo também */
-    text-align: center;
-    white-space: nowrap;
-    transition: transform 0.2s ease;
-  }
-  
-  
-  
-  
-  .buttons button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .cta {
-    background-color: #72e0c2;
-    color: black;
-    padding: 1.2rem 2.5rem;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-  
-  .wave {
-    display: inline-block;
-    animation: wave-animation 2s infinite;
-    transform-origin: 70% 70%;
-  }
-  
-  @keyframes wave-animation {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(14deg); }
-    20% { transform: rotate(-8deg); }
-    30% { transform: rotate(14deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(10deg); }
-    60% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
-  }
-  
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: inherit;
+}
+
+.text-content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: inherit;
+}
+
+/* Destaque com cor do tema */
+.highlight {
+  color: #7c3aed; /* Roxo vibrante (claro) */
+}
+
+body.dark .highlight {
+  color: #d8b4fe; /* Lavanda suave (escuro) */
+}
+
+.text-content p {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  color: inherit;
+}
+
+/* Botões principais */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.buttons button {
+  background-color: #4c1d95; /* Roxo escuro neutro */
+  color: #f3e8ff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 220px;
+  text-align: center;
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+body.light .buttons button {
+  background-color: #ede9fe; /* Lavanda claro */
+  color: #4c1d95;
+}
+
+body.dark .buttons button {
+  background-color: #1e1b29; /* Roxo carvão profundo */
+  color: #ede9fe;
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+  background-color: #a78bfa; /* Roxo médio pastel */
+  color: white;
+  box-shadow: 0 4px 12px rgba(167, 139, 250, 0.3); /* Glow roxo */
+}
+
+/* Botão CTA especial */
+.cta {
+  background-color: #4c1d95;
+  color: #f3e8ff;
+  padding: 1.2rem 2.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+body.dark .cta {
+  background-color: #d8b4fe;
+  color: #1e1b29;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+  background-color: #a78bfa;
+  color: white;
+}
+
+/* Emojis animados */
+.wave {
+  display: inline-block;
+  animation: wave-animation 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}

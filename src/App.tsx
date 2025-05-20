@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import './styles/App.css';
 import { Moon, Sun } from 'lucide-react';
 import HeaderSecundario from './HeaderSecundario';
-import avatar from './assets/ana_avatar_dois.png';
+import avatar from './assets/ana_ana.png';
 import AnaliseDados from './analise_dados';
 import WebDesign from './web_design';
 import Programacao from './programacao';
-import ContatoDropdown from './ContatoDropdown';
+// import ContatoDropdown from './ContatoDropdown'; // Comentado pois não está mais em uso
 
 function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
@@ -69,8 +69,7 @@ function App() {
           </div>
         </div>
 
-        {/* Botão de contato */}
-        <ContatoDropdown />
+        {/* Botão "Contate-me" removido daqui */}
       </div>
 
       {/* Conteúdo principal */}
@@ -86,7 +85,8 @@ function App() {
             <button onClick={() => scrollToSection('programacao')}>Programação Web</button>
           </div>
 
-          <button className="cta">Meus Projetos</button>
+          {/* Botão Meus Projetos (sem ação) */}
+          <button className="cta">Entre em contato</button>
         </div>
 
         <div className="image-content">

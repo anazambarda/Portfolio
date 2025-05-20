@@ -3,13 +3,13 @@
 /* ================== */
 
 body.light {
-  background-color: #f7f7f7;
-  color: #1e1e1e;
+  background-color: #f5f3ff; /* lavanda suave */
+  color: #4c1d95;            /* roxo escuro vibrante */
 }
 
 body.dark {
-  background-color: #0d0d0d;
-  color: white;
+  background-color: #1e1b29; /* roxo bem escuro */
+  color: #f5f3ff;
 }
 
 /* ================== */
@@ -17,23 +17,29 @@ body.dark {
 /* ================== */
 
 body.light .buttons button {
-  background-color: #e0e0e0;
-  color: #1e1e1e;
+  background-color: #e9d5ff; /* lilás suave */
+  color: #4c1d95;
 }
 
 body.dark .buttons button {
-  background-color: #1e1e1e;
-  color: white;
+  background-color: #372a53; /* roxo escuro opaco */
+  color: #f5f3ff;
 }
 
 body.light .cta {
-  background-color: #008562;
-  color: white;
+  background-color: #4c1d95;
+  color: #f5f3ff;
 }
 
 body.dark .cta {
-  background-color: #72e0c2;
-  color: black;
+  background-color: #f5f3ff;
+  color: #1e1b29;
+}
+
+.cta:hover {
+  background-color: #a78bfa;
+  color: white;
+  transform: scale(1.05);
 }
 
 /* ================== */
@@ -43,8 +49,8 @@ body.dark .cta {
 body.light #analise,
 body.light #webdesign,
 body.light #programacao {
-  background-color: #f7f7f7;
-  color: #1e1e1e;
+  background-color: #f5f3ff;
+  color: #4c1d95;
   padding: 4rem;
   min-height: 100vh;
 }
@@ -52,8 +58,8 @@ body.light #programacao {
 body.dark #analise,
 body.dark #webdesign,
 body.dark #programacao {
-  background-color: #0d0d0d;
-  color: white;
+  background-color: #1e1b29;
+  color: #f5f3ff;
   padding: 4rem;
   min-height: 100vh;
 }
@@ -75,48 +81,41 @@ body.dark #programacao {
   backdrop-filter: blur(6px);
 }
 
-body.dark .theme-switch {
-  background-color: rgba(255, 255, 255, 0.1);
+body.light .theme-switch {
+  background-color: rgba(76, 29, 149, 0.1); /* roxo translúcido */
 }
 
-body.light .theme-switch {
-  background-color: rgba(0, 0, 0, 0.05);
+body.dark .theme-switch {
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 .theme-switch:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(167, 139, 250, 0.2);
 }
 
-/* Ícones do tema */
+/* ============================ */
+/* Ícones do tema              */
+/* ============================ */
+
 .icon-container {
+  background-color: transparent;
+  color: inherit;
+  padding: 0.2rem;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: inherit;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
   transition: all 0.3s ease;
 }
 
 .icon-container.selected {
-  background-color: #fff;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background-color: #a78bfa;
+  color: white;
   transform: scale(1.1);
 }
 
-body.light .icon-container.selected {
-  background-color: #1e1e1e;
-  color: white;
-}
-
-body.dark .icon-container.selected {
-  background-color: white;
-  color: #1e1e1e;
-}
-
 /* ============================ */
-/* Botão "Contate-me"           */
+/* Botão "Contate-me"          */
 /* ============================ */
 
 .contato-box {
@@ -139,31 +138,35 @@ body.dark .icon-container.selected {
   transition: background 0.3s ease;
 }
 
-body.dark .contato-btn {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-}
-
-body.dark .contato-btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
 body.light .contato-btn {
   background-color: rgba(0, 0, 0, 0.05);
-  color: #1e1e1e;
+  color: #4c1d95;
 }
 
 body.light .contato-btn:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #a78bfa;
+  color: white;
 }
 
-/* Dropdown de contato */
+body.dark .contato-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f5f3ff;
+}
+
+body.dark .contato-btn:hover {
+  background-color: #c4b5fd;
+  color: #1e1b29;
+}
+
+/* ============================ */
+/* Dropdown de contato         */
+/* ============================ */
 
 .contato-dropdown {
   position: absolute;
   top: 2.5rem;
   right: 0;
-  background-color: rgba(40, 40, 40, 0.95);
+  background-color: rgba(64, 43, 95, 0.95); /* roxo escuro transparente */
   padding: 0.8rem 1rem;
   border-radius: 10px;
   color: white;
@@ -176,44 +179,45 @@ body.light .contato-btn:hover {
 }
 
 .contato-dropdown a {
-  color: #a7c8ff;
+  color: #c4b5fd;
   text-decoration: none;
 }
 
 .contato-dropdown a:hover {
   text-decoration: underline;
+  color: white;
 }
 
-/* ================== */
-/* Destaque do nome   */
-/* ================== */
+/* ============================ */
+/* Destaque do nome            */
+/* ============================ */
 
 .highlight {
   font-weight: bold;
 }
 
 body.light .highlight {
-  color: #008562;
+  color: #a78bfa;
 }
 
 body.dark .highlight {
-  color: #72e0c2;
+  color: #d8b4fe;
 }
 
-/* ================== */
-/* Header - Tema Claro */
-/* ================== */
+/* ============================ */
+/* Header - Tema Claro         */
+/* ============================ */
 
 .light .header-secundario {
-  background-color: rgba(225, 225, 225, 0.61);
+  background-color: rgba(255, 255, 255, 0.9);
   border-bottom: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .light .nav-secundaria button {
-  color: black;
+  color: #4c1d95;
 }
 
 .light .nav-secundaria button:hover {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(167, 139, 250, 0.15);
 }

@@ -1,40 +1,58 @@
+/* ============================= */
+/* Header Secundário - Purple Glow */
+/* ============================= */
+
 .header-secundario {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(20, 20, 20, 0.95);
+  background-color: rgba(237, 233, 254, 0.9); /* lavanda suave */
   backdrop-filter: blur(6px);
-  padding: 1rem 2rem; 
+  padding: 1rem 2rem;
   display: flex;
   justify-content: center;
-  align-items: center; /* centraliza os ícones verticalmente */
+  align-items: center;
   z-index: 999;
-  border-bottom: none; 
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); 
+  border-bottom: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
+
+body.dark .header-secundario {
+  background-color: rgba(30, 27, 41, 0.95); /* roxo escuro elegante */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================= */
+/* Navegação                     */
+/* ============================= */
 
 .nav-secundaria {
   display: flex;
   gap: 2rem;
-  align-items: center; /* garante alinhamento dos botões */
+  align-items: center;
 }
 
 .nav-secundaria button {
   all: unset;
-  color: white;
+  color: #4c1d95; /* roxo escuro */
   cursor: pointer;
-  padding: 0.6rem; /* um pouco mais de espaço pro clique */
+  padding: 0.6rem 1rem;
   border-radius: 8px;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
+body.dark .nav-secundaria button {
+  color: #f5f3ff; /* lavanda claro */
+}
+
 .nav-secundaria button:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: scale(1.1);
+  background: rgba(167, 139, 250, 0.15); /* hover lavanda translúcida */
+  transform: scale(1.05);
 }
 
 .nav-secundaria button.ativo {
-  background: rgba(181, 181, 181, 0.445);
-  transform: scale(1.15);
+  background: #a78bfa; /* lavanda média */
+  color: white;
+  transform: scale(1.1);
 }

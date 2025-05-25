@@ -1,19 +1,19 @@
 /* ================== */
-/* Tema Geral         */
+/* Tema Geral          */
 /* ================== */
 
 body.light {
-  background-color: #f4f0fa; /* roxo muito claro */
-  color: #3c2f57; /* roxo escuro */
+  background-color: #f4f0fa;
+  color: #3c2f57;
 }
 
 body.dark {
-  background-color: #1a1124; /* roxo muito escuro */
-  color: #f4f0fa; /* roxo muito claro */
+  background-color: #1a1124;
+  color: #f4f0fa;
 }
 
 /* ================== */
-/* Botões e CTA       */
+/* Botões e CTA        */
 /* ================== */
 
 body.light .buttons button {
@@ -43,7 +43,7 @@ body.dark .cta {
 }
 
 /* ================== */
-/* Seções             */
+/* Seções              */
 /* ================== */
 
 body.light #analise,
@@ -65,7 +65,7 @@ body.dark #programacao {
 }
 
 /* ============================ */
-/* Botão de Troca de Tema 🔄   */
+/* Botão de Troca de Tema       */
 /* ============================ */
 
 .theme-switch {
@@ -93,7 +93,6 @@ body.light .theme-switch {
   background-color: rgba(140, 102, 200, 0.2);
 }
 
-/* Ícones do tema */
 .icon-container {
   display: flex;
   align-items: center;
@@ -112,7 +111,7 @@ body.light .theme-switch {
 }
 
 /* ============================ */
-/* Botão "Contate-me"          */
+/* Botão "Contate-me"           */
 /* ============================ */
 
 .contato-box {
@@ -155,8 +154,6 @@ body.light .contato-btn:hover {
   color: white;
 }
 
-/* Dropdown de contato */
-
 .contato-dropdown {
   position: absolute;
   top: 2.5rem;
@@ -184,7 +181,7 @@ body.light .contato-btn:hover {
 }
 
 /* ================== */
-/* Destaque do nome   */
+/* Destaque do nome    */
 /* ================== */
 
 .highlight {
@@ -200,7 +197,7 @@ body.dark .highlight {
 }
 
 /* ================== */
-/* Header - Tema Claro */
+/* Header Secundário   */
 /* ================== */
 
 .light .header-secundario {
@@ -218,7 +215,7 @@ body.dark .highlight {
 }
 
 /* =========================== */
-/* Análise de Dados - Geral   */
+/* Análise de Dados - Geral    */
 /* =========================== */
 
 .analise-container {
@@ -262,8 +259,9 @@ body.dark .highlight {
 }
 
 /* ===================== */
-/* Tema Escuro - Análise*/
+/* Tema Escuro - Análise */
 /* ===================== */
+
 body.dark .projeto-card {
   background-color: #291a3a;
   color: white;
@@ -288,8 +286,9 @@ body.dark .btn-ver-projeto:hover {
 }
 
 /* ===================== */
-/* Tema Claro - Análise */
+/* Tema Claro - Análise  */
 /* ===================== */
+
 body.light .projeto-card {
   background-color: #ffffff;
   color: #3c2f57;
@@ -315,7 +314,7 @@ body.light .btn-ver-projeto:hover {
 }
 
 /* ===================== */
-/* Elementos Comuns      */
+/* Elementos Comuns       */
 /* ===================== */
 
 .projeto-card h3 {
@@ -345,7 +344,7 @@ body.modal-aberto {
 }
 
 /* ===================== */
-/* Modal - Geral e Temas */
+/* Modal Overlay e Iframe */
 /* ===================== */
 
 .modal-overlay {
@@ -357,30 +356,25 @@ body.modal-aberto {
   z-index: 9999;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
 }
 
-/* Fundo do overlay em roxo suave no tema claro */
 body.light .modal-overlay {
-  background-color: rgb(210, 180, 255); /* Roxo claro com transparência */
+  background-color: rgb(255, 255, 255);
   color: #3c2f57;
 }
 
-/* Fundo do overlay em roxo escuro no tema escuro */
 body.dark .modal-overlay {
-  background-color: #1c1424; /* Roxo escuro translúcido */
+  background-color: #1c1c2c;
   color: white;
 }
 
-/* Botão de voltar */
+/* Botão Voltar no Topo */
 .modal-voltar {
-  position: absolute;
-  top: 12px;
-  left: 12px;
+  position: relative;
+  padding: 12px;
   z-index: 10000;
   cursor: pointer;
+  align-self: flex-start;
 }
 
 .icone-voltar {
@@ -391,32 +385,30 @@ body.dark .modal-overlay {
   opacity: 0.6;
 }
 
-/* Frame Wrapper (borda e fundo do card principal) */
+/* Wrapper do iframe - agora ocupa toda a tela abaixo do topo */
 .modal-frame-wrapper {
-  width: 95%;
-  max-width: 1400px;
-  height: 85vh;
+  width: 100%;
+  flex: 1;
   overflow: hidden;
-  border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: start;
-  box-shadow: 0 0 20px #3c2f5700; /* sombra leve roxa */
+  background-color: transparent;
 }
 
 body.light .modal-frame-wrapper {
-  background-color: #ebe0fa; /* lilás claro */
-  box-shadow: 0 0 16px rgba(180, 120, 255, 0.5);
+  background-color: #ebe0fa;
 }
 
 body.dark .modal-frame-wrapper {
-  background-color: #3c2f5700; /* roxo escuro */
-  box-shadow: 0 0 20px rgba(90, 60, 160, 0);
+  background-color: #1c1c2c;
 }
 
-/* Iframe */
+/* Iframe ocupa 100% do wrapper */
 .iframe-centralizado {
-  width: 100%;
-  height: 100vh;
+ width: 100%;
+  height: calc(100% + 80px);  /* Aumenta mais a altura */
+  margin-bottom: -80px;       /* Corta mais de baixo */
   border: none;
 }
+

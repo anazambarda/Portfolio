@@ -42,9 +42,9 @@ const AnaliseDados = () => {
             className="btn-ver-projeto"
             onClick={() =>
               abrirModal(
-                'https://app.powerbi.com/view?r=eyJrIjoiNDFhYjA4OWUtMzJjMC00ZTc3LWExNWYtZjUwMjk3M2M0ZjQ1IiwidCI6IjFiZGQzYWUxLTRiYjgtNDRjYS04MmIzLTgzMzlmYWVjODFlZSJ9'
-              )
-            }
+                'https://app.powerbi.com/view?r=eyJrIjoiZDc5OWU0MWUtOTk3Yi00NWY2LWI4ZTgtYmIzYTQ3MDIzMWM4IiwidCI6IjQzMGM1OWFiLWRiZTktNDNhOC05MGRmLWY4ZTQwYzY3NzdjOSJ9'
+                )
+              }
           >
             Ver projeto
           </span>

@@ -36,14 +36,13 @@ const AnaliseDados = () => {
       <div className="projetos-wrapper">
         <div className="projeto-card">
           <PieChart className="icon" size={44} />
-          <h3>Projeto Sicredi</h3>
-          <p className="projeto-sub">Painel interativo de desempenho de vendas</p>
+          <h3>Projeto Análise Hospitalar</h3>
+          <p className="projeto-sub">Painel interativo de consultas hospitalares</p>
           <span
             className="btn-ver-projeto"
             onClick={() =>
               abrirModal(
-                'https://app.powerbi.com/view?r=eyJrIjoiZDc5OWU0MWUtOTk3Yi00NWY2LWI4ZTgtYmIzYTQ3MDIzMWM4IiwidCI6IjQzMGM1OWFiLWRiZTktNDNhOC05MGRmLWY4ZTQwYzY3NzdjOSJ9'
-                )
+                'https://app.powerbi.com/view?r=eyJrIjoiMTJlYjExNmQtYmY5ZC00YTZhLTgyZTgtNjBjZGQ2NWY3NzgyIiwidCI6IjQzMGM1OWFiLWRiZTktNDNhOC05MGRmLWY4ZTQwYzY3NzdjOSJ9'                )
               }
           >
             Ver projeto
@@ -52,11 +51,11 @@ const AnaliseDados = () => {
 
         <div className="projeto-card">
           <BarChart4 className="icon" size={44} />
-          <h3>Projeto Sicredi</h3>
-          <p className="projeto-sub">Análise comparativa de metas e resultados</p>
+          <h3>Projeto Vendas No Período</h3>
+          <p className="projeto-sub">Análise comparativa de vendas e resultados</p>
           <span
             className="btn-ver-projeto"
-            onClick={() => abrirModal('https://link-projeto2.com')}
+            onClick={() => abrirModal('https://app.powerbi.com/view?r=eyJrIjoiYzM3ZGI5YTUtZjRjZS00ZmNiLWIxYjktMWZmNzcwMmVhNWY0IiwidCI6IjQzMGM1OWFiLWRiZTktNDNhOC05MGRmLWY4ZTQwYzY3NzdjOSJ9')}
           >
             Ver projeto
           </span>
@@ -64,11 +63,11 @@ const AnaliseDados = () => {
 
         <div className="projeto-card">
           <LineChart className="icon" size={44} />
-          <h3>Projeto Sicredi</h3>
+          <h3>Projeto Análise de Vendas</h3>
           <p className="projeto-sub">Previsão de receita baseada em tendências históricas</p>
           <span
             className="btn-ver-projeto"
-            onClick={() => abrirModal('https://link-projeto3.com')}
+            onClick={() => abrirModal('https://app.powerbi.com/view?r=eyJrIjoiOTI2MjM4YmItYTZjZi00Y2NiLTg0NGEtNzYxY2E5ZjI3NzkyIiwidCI6IjQzMGM1OWFiLWRiZTktNDNhOC05MGRmLWY4ZTQwYzY3NzdjOSJ9')}
           >
             Ver projeto
           </span>

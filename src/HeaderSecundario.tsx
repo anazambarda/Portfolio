@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BarChart3, LayoutDashboard, Code, ArrowUp } from 'lucide-react';
+import { BarChart3, Code, ArrowUp } from 'lucide-react';
 import './styles/HeaderSecundario.css';
 
 const HeaderSecundario = () => {
@@ -18,7 +18,6 @@ const HeaderSecundario = () => {
     const handleScroll = () => {
       const secoes = [
         { id: 'analise', offset: 0 },
-        { id: 'webdesign', offset: 0 },
         { id: 'programacao', offset: 0 },
       ];
 
@@ -40,7 +39,7 @@ const HeaderSecundario = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // checar de início
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -55,13 +54,6 @@ const HeaderSecundario = () => {
           <BarChart3 size={24} />
         </button>
         <button
-          onClick={() => scrollToSection('webdesign')}
-          className={secaoAtual === 'webdesign' ? 'ativo' : ''}
-          title="Web Design"
-        >
-          <LayoutDashboard size={24} />
-        </button>
-        <button
           onClick={() => scrollToSection('programacao')}
           className={secaoAtual === 'programacao' ? 'ativo' : ''}
           title="Programação"
@@ -74,8 +66,7 @@ const HeaderSecundario = () => {
           title="Voltar ao Início"
         >
           <ArrowUp size={24} />
-      </button>
-
+        </button>
       </nav>
     </header>
   );

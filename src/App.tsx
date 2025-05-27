@@ -2,11 +2,12 @@ import { useEffect, useState } from 'react';
 import './styles/App.css';
 import { Moon, Sun } from 'lucide-react';
 import HeaderSecundario from './HeaderSecundario';
-import avatar from './assets/ana_ana.png';
 import AnaliseDados from './analise_dados';
-import WebDesign from './web_design';
 import Programacao from './programacao';
-// import ContatoDropdown from './ContatoDropdown'; // Comentado pois não está mais em uso
+
+// ✅ Avatar sem a mão e imagem da mão
+import avatar from './assets/eueu.png';
+import mao from './assets/mao.png';
 
 function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
@@ -50,16 +51,14 @@ function App() {
       {/* Botões fixos no topo direito */}
       <div
         style={{
-          position: 'fixed',
-          top: '1rem',
-          right: '1rem',
           display: 'flex',
           alignItems: 'center',
           gap: '0.75rem',
-          zIndex: 1000,
+          justifyContent: 'flex-end',
+          marginTop: '1rem',
+          marginRight: '1rem',
         }}
       >
-        {/* Botão de tema */}
         <div className="theme-switch" onClick={toggleTheme}>
           <div className={`icon-container ${theme === 'light' ? 'selected' : ''}`}>
             <Sun size={18} />
@@ -68,36 +67,41 @@ function App() {
             <Moon size={18} />
           </div>
         </div>
-
-        {/* Botão "Contate-me" removido daqui */}
       </div>
 
       {/* Conteúdo principal */}
       <div className="container">
         <div className="text-content">
-          <h4>OLÁ, PESSOAL <span className="wave">👋</span></h4>
-          <h1>Eu sou a <span className="highlight">Ana!</span></h1>
-          <p>Analista de dados, Web designer, e Programadora FullStack.</p>
+          <h4>
+            OLÁ, PESSOAL <span className="wave">👋</span>
+          </h4>
+          <h1>
+            Eu sou a <span className="highlight">Ana!</span>
+          </h1>
+          <p>Analista de dados e Programadora FullStack.</p>
 
           <div className="buttons">
             <button onClick={() => scrollToSection('analise')}>Análise de Dados</button>
-            <button onClick={() => scrollToSection('webdesign')}>Web Design</button>
             <button onClick={() => scrollToSection('programacao')}>Programação Web</button>
           </div>
 
-          {/* Botão Meus Projetos (sem ação) */}
           <button className="cta">Entre em contato</button>
         </div>
 
-        <div className="image-content">
-          <img src={avatar} alt="Avatar" />
+        {/* 🔥 Avatar + Mão */}
+        <div className="image-content avatar-wrapper">
+          <img src={avatar} alt="Avatar" className="personagem" />
+          <img src={mao} alt="Mão acenando" className="mao" />
         </div>
       </div>
 
       {/* Seções */}
-      <div id="analise" className="section-offset"><AnaliseDados /></div>
-      <div id="webdesign" className="section-offset"><WebDesign /></div>
-      <div id="programacao" className="section-offset"><Programacao /></div>
+      <div id="analise" className="section-offset">
+        <AnaliseDados />
+      </div>
+      <div id="programacao" className="section-offset">
+        <Programacao />
+      </div>
     </>
   );
 }

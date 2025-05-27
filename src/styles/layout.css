@@ -9,15 +9,36 @@
   .text-content {
     flex: 1;
   }
-  
-  .image-content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .image-content img {
-    width: 410px;
-    height: auto;
-  }
-  
+
+/* Avatar com mão animada */
+/* Avatar com mão animada */
+/* Avatar com mão animada */
+.avatar-wrapper {
+  position: relative;
+  width: 450px;  /* ⬆️ Aumentei aqui */
+  height: auto;
+}
+
+.personagem {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mao {
+  position: absolute;
+  top: 180px;     /* ↕️ Ajuste vertical (aumenta = desce, diminui = sobe) */
+  right: 80px;  /* ↔️ Ajuste horizontal (aumenta = vai pra esquerda, diminui = vai pra direita) */
+  width: 85px;  /* Tamanho da mão */
+  transform-origin: bottom center;
+  animation: acenar 1.5s infinite ease-in-out;
+}
+
+/* 🔄 Animação do aceno */
+@keyframes acenar {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(15deg); }
+  100% { transform: rotate(0deg); }
+}

@@ -1,82 +1,149 @@
-/* =========================== */
-/* Container do botão contato */
-/* =========================== */
+/* ============================ */
+/* Modal de Contato             */
+/* ============================ */
 
-.contato-box {
-  display: flex;
-  align-items: center;
-  position: relative;
-  height: 2.2rem;
-}
-
-/* =========================== */
-/* Botão "Contate-me" base     */
-/* =========================== */
-
-.contato-btn {
-  border: none;
-  border-radius: 999px;
-  padding: 0.3rem 0.9rem;
-  font-size: 0.85rem;
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  z-index: 9999;
 }
 
-/* =========================== */
-/* Tema escuro                 */
-/* =========================== */
+/* ============================ */
+/* Modal Content                */
+/* ============================ */
 
-body.dark .contato-btn {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-}
-
-body.dark .contato-btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* =========================== */
-/* Tema claro                  */
-/* =========================== */
-
-body.light .contato-btn {
-  background-color: rgba(0, 0, 0, 0.05);
-  color: #1e1e1e;
-}
-
-body.light .contato-btn:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-/* =========================== */
-/* Dropdown de contato         */
-/* =========================== */
-
-.contato-dropdown {
-  position: absolute;
-  top: 2.5rem;
-  right: 0;
-  background-color: rgba(40, 40, 40, 0.95);
-  padding: 0.8rem 1rem;
-  border-radius: 10px;
-  color: white;
-  z-index: 10;
-  font-size: 0.9rem;
+.modal {
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  gap: 1rem;
+  animation: fadeIn 0.3s ease;
 }
 
-.contato-dropdown a {
-  color: #a7c8ff;
+/* Tema Claro */
+body.light .modal {
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #3c2f57;
+}
+
+/* Tema Escuro */
+body.dark .modal {
+  background-color: rgba(26, 17, 36, 0.95);
+  color: #f4f0fa;
+}
+
+.modal h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.modal p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ============================ */
+/* Links                        */
+/* ============================ */
+
+/* Links padrão */
+.modal a {
+  color: #8c66c8;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.contato-dropdown a:hover {
+.modal a:hover {
   text-decoration: underline;
+  color: #8c66c8;
+}
+
+/* No tema claro, links ficam mais escuros */
+body.light .modal a {
+  color: #3c2f57;
+}
+
+body.light .modal a:hover {
+  color: #8c66c8;
+}
+
+/* ============================ */
+/* Botão de Download            */
+/* ============================ */
+
+.download-button {
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Tema Claro */
+body.light .download-button {
+  background-color: #3c2f57;
+  color: #f4f0fa;
+}
+
+body.light .download-button:hover {
+  background-color: #8c66c8;
+  color: white;
+}
+
+/* Tema Escuro */
+body.dark .download-button {
+  background-color: #f4f0fa;
+  color: #3c2f57;
+}
+
+body.dark .download-button:hover {
+  background-color: #8c66c8;
+  color: white;
+}
+
+/* ============================ */
+/* Botão Fechar                 */
+/* ============================ */
+
+.close-button {
+  background: transparent;
+  border: 2px solid #8c66c8;
+  color: #8c66c8;
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #8c66c8;
+  color: white;
+}
+
+/* ============================ */
+/* Animação                     */
+/* ============================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

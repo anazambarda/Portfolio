@@ -18,6 +18,7 @@ function App() {
   });
 
   const [mostrarHeader, setMostrarHeader] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,6 +44,9 @@ function App() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <>
@@ -85,7 +89,9 @@ function App() {
             <button onClick={() => scrollToSection('programacao')}>Programação Web</button>
           </div>
 
-          <button className="cta">Entre em contato</button>
+          <button className="cta" onClick={openModal}>
+            Entre em contato
+          </button>
         </div>
 
         {/* 🔥 Avatar + Mão */}
@@ -102,6 +108,49 @@ function App() {
       <div id="programacao" className="section-offset">
         <Programacao />
       </div>
+
+      {/* Modal de Contato */}
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
+            <h2>Meus Contatos</h2>
+            <p>
+              <strong>Email:</strong>{' '}
+              <a href="mailto:anacarolinazambarda@gmail.com">
+                anacarolinazambarda@gmail.com
+              </a>
+            </p>
+            <p>
+              <strong>WhatsApp:</strong>{' '}
+              <a
+                href="https://wa.me/5551995719800"
+                target="_blank"
+                rel="noreferrer"
+              >
+                +55 51 99571-9800
+              </a>
+            </p>
+            <p>
+              <strong>LinkedIn:</strong>{' '}
+              <a
+                href="https://www.linkedin.com/in/ana-carolina-zambarda-380740262/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Meu perfil
+              </a>
+            </p>
+
+            <a href="/meu-curriculo.pdf" download className="download-button">
+              📄 Baixar Currículo
+            </a>
+
+            <button className="close-button" onClick={closeModal}>
+              Fechar
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

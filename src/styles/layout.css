@@ -14,10 +14,17 @@
 /* Avatar com mão animada */
 /* Avatar com mão animada */
 .avatar-wrapper {
-  position: relative;
-  width: 450px;  /* ⬆️ Aumentei aqui */
-  height: auto;
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
+
+.avatar-container {
+  position: relative;
+  width: clamp(280px, 55vw, 400px); /* 👈 Agora bem maior! */
+}
+
 
 .personagem {
   width: 100%;
@@ -27,12 +34,16 @@
 
 .mao {
   position: absolute;
-  top: 180px;     /* ↕️ Ajuste vertical (aumenta = desce, diminui = sobe) */
-  right: 80px;  /* ↔️ Ajuste horizontal (aumenta = vai pra esquerda, diminui = vai pra direita) */
-  width: 85px;  /* Tamanho da mão */
+  top: 40%;
+  left: 63%;
+  width: clamp(30px, 22%, 77px);
   transform-origin: bottom center;
   animation: acenar 1.5s infinite ease-in-out;
 }
+
+
+
+
 
 /* 🔄 Animação do aceno */
 @keyframes acenar {

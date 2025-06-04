@@ -95,9 +95,11 @@ function App() {
         </div>
 
         {/* 🔥 Avatar + Mão */}
-        <div className="image-content avatar-wrapper">
-          <img src={avatar} alt="Avatar" className="personagem" />
-          <img src={mao} alt="Mão acenando" className="mao" />
+        <div className="avatar-wrapper">
+          <div className="avatar-container">
+            <img src={avatar} alt="Avatar" className="personagem" />
+            <img src={mao} alt="Mão acenando" className="mao" />
+          </div>
         </div>
       </div>
 

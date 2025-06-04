@@ -17,39 +17,39 @@ const Programacao = () => {
           <p className="projeto-sub">Site pessoal desenvolvido em React com TypeScript</p>
           <a
             className="btn-ver-projeto"
-            href="https://seu-link-deploy-1.com"
+            href="https://github.com/anazambarda/Portfolio"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Ver projeto
+            Ver código no GitHub
           </a>
         </div>
 
         <div className="projeto-card">
           <Server className="icon" size={44} />
-          <h3>API com Node.js</h3>
-          <p className="projeto-sub">Backend RESTful com autenticação e banco de dados</p>
+          <h3>MindTrack - Python/Django</h3>
+          <p className="projeto-sub">Projeto acadêmico para saúde mental desenvolvido em Django</p>
           <a
             className="btn-ver-projeto"
-            href="https://seu-link-deploy-2.com"
+            href="https://github.com/anazambarda/mindtrack"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Ver projeto
+            Ver código no GitHub
           </a>
         </div>
 
         <div className="projeto-card">
           <Database className="icon" size={44} />
-          <h3>Sistema de Gestão</h3>
-          <p className="projeto-sub">Aplicação Full Stack para controle de clientes e vendas</p>
+          <h3>ERP para Provedores</h3>
+          <p className="projeto-sub">Sistema em desenvolvimento com foco em gestão de provedores</p>
           <a
             className="btn-ver-projeto"
-            href="https://seu-link-deploy-3.com"
+            href="https://github.com/anazambarda/erp_provedor"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Ver projeto
+            Ver código no GitHub
           </a>
         </div>
       </div>

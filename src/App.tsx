@@ -82,7 +82,7 @@ function App() {
           <h1>
             Eu sou a <span className="highlight">Ana!</span>
           </h1>
-          <p>Analista de dados e Programadora FullStack.</p>
+          <p>Analista de dados e Desenvolvedora Web.</p>
 
           <div className="buttons">
             <button onClick={() => scrollToSection('analise')}>Análise de Dados</button>
@@ -141,7 +141,7 @@ function App() {
               </a>
             </p>
 
-            <a href="/meu-curriculo.pdf" download className="download-button">
+            <a href="/public/Ana_Carolina_Zambarda_CV.pdf" download className="download-button">
               📄 Baixar Currículo
             </a>
 

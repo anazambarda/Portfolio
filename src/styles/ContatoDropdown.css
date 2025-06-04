@@ -55,28 +55,18 @@ body.dark .modal {
 }
 
 /* ============================ */
-/* Links                        */
+/* Links do Modal (exceto botão) */
 /* ============================ */
 
-/* Links padrão */
-.modal a {
-  color: #8c66c8;
+.modal a:not(.download-button) {
+  color: #583bff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.modal a:hover {
-  text-decoration: underline;
+.modal a:not(.download-button):hover {
   color: #8c66c8;
-}
-
-/* No tema claro, links ficam mais escuros */
-body.light .modal a {
-  color: #3c2f57;
-}
-
-body.light .modal a:hover {
-  color: #8c66c8;
+  text-decoration: none;
 }
 
 /* ============================ */
@@ -89,18 +79,20 @@ body.light .modal a:hover {
   border: none;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.15s ease-in-out;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Efeito de crescimento no hover */
+.download-button:hover {
+  transform: scale(1.02);
 }
 
 /* Tema Claro */
 body.light .download-button {
   background-color: #3c2f57;
-  color: #f4f0fa;
-}
-
-body.light .download-button:hover {
-  background-color: #8c66c8;
-  color: white;
+  color: #ffffff;
 }
 
 /* Tema Escuro */
@@ -110,8 +102,9 @@ body.dark .download-button {
 }
 
 body.dark .download-button:hover {
-  background-color: #8c66c8;
-  color: white;
+  background-color: #f4f0fa;
+  color: #3c2f57;
+  transform: scale(1.02);
 }
 
 /* ============================ */

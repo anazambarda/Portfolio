@@ -144,7 +144,7 @@ function App() {
             </p>
 
             <a href="/public/Ana_Carolina_Zambarda_CV.pdf" download className="download-button">
-              📄 Baixar Currículo
+              Baixar Currículo
             </a>
 
             <button className="close-button" onClick={closeModal}>

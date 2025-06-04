@@ -64,7 +64,7 @@ const AnaliseDados = () => {
         <div className="projeto-card">
           <LineChart className="icon" size={44} />
           <h3>Projeto Análise de Vendas</h3>
-          <p className="projeto-sub">Previsão de receita baseada em tendências históricas</p>
+          <p className="projeto-sub">Comparação de vendas por categoria e produtos</p>
           <span
             className="btn-ver-projeto"
             onClick={() => abrirModal('https://app.powerbi.com/view?r=eyJrIjoiOTI2MjM4YmItYTZjZi00Y2NiLTg0NGEtNzYxY2E5ZjI3NzkyIiwidCI6IjQzMGM1OWFiLWRiZTktNDNhOC05MGRmLWY4ZTQwYzY3NzdjOSJ9')}
